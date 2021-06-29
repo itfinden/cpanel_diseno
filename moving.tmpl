@@ -1,0 +1,520 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Itfinden SPA</title>
+<!--<link href="tools/style.css" rel="stylesheet" type="text/css" media="screen" />-->
+<script type="text/javascript" src="http://images.itfinden.com/cpanel_js/jquery.min.js"></script> 
+<link href='http://fonts.googleapis.com/css?family=Just+Another+Hand|Karla:400,700,400italic,700italic' rel='stylesheet' type='text/css'/>
+<meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no"/>
+
+
+<style type="text/css">
+	
+/* Reset */
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,dfn,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+
+
+html,
+body {
+  background-color: #ffffff;
+  height: 100%;
+  font-size: 100%;
+  width: 100%;
+}
+
+
+body{
+margin:0;
+padding:0;
+color: #000000;
+position: relative;
+font-family: 'Karla', sans-serif;
+display: block;
+}
+
+
+.off_canavas_wrap{
+	-webkit-backface-visibility: hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.header{
+	width: 100%;
+	float: left;
+	margin-bottom: 50px;
+}
+
+.logo{
+	width: 100%;
+	margin: 40px auto 50px;
+	text-align: center;
+}
+
+.logo h1{
+	font-size: 73px;
+	font-family: 'Just Another Hand', cursive;
+	color: #000;
+	margin-bottom: 40px;
+}
+
+.logo h1 span{
+	color: #c80403;
+}
+
+.logo p{
+	font-size: 24px;
+}
+
+.mobile_text{
+	display: none;
+}
+
+
+ul.features{
+	width: 100%;
+	float: left;
+}
+
+ul.features li{
+	width: 20%;
+	float: left;
+	text-align: center;
+	padding-top: 60px;
+}
+
+ul.features li h2{
+	font-size: 24px;
+	text-transform: uppercase;
+	margin-bottom: 3px;
+}
+
+ul.features li p{
+	font-size: 14px;
+}
+
+ul.features li.home{
+	background: url(https://images.itfinden.com/cpanel_images/home.png) center top no-repeat;
+}
+
+
+ul.features li.relation{
+	background: url(https://images.itfinden.com/cpanel_images/relationship.png) center top no-repeat;
+}
+
+
+ul.features li.ideas{
+	background: url(https://images.itfinden.com/cpanel_images/ideas.png) center top no-repeat;
+}
+
+
+ul.features li.tech{
+	background: url(https://images.itfinden.com/cpanel_images/technology.png) center top no-repeat;
+}
+
+
+ul.features li.everything{
+	background: url(https://images.itfinden.com/cpanel_images/everything.png) center top no-repeat;
+}
+/*
+ul.features li.everything h2{
+	font-weight: bold;
+	color: #c80403;
+}*/
+
+.comingsoon{
+	width: 100%;
+	float: left;
+	height: 100%;
+	/*background: #000 url(images/background.jpg) right bottom no-repeat;*/
+
+	background: #000 url(https://images.itfinden.com/laptop-working-header.jpg) right bottom no-repeat;
+	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position: relative;
+}
+
+.black{
+background-color: rgba(0, 0, 0, 0.4);
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+
+.comingsoonmain{
+  width: 100%;
+  height: 70%;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;	
+	
+}
+
+.comingsoonmain p{
+	font-size: 14px;
+	color: #ffffff;
+	text-align: center;
+}
+
+.comingsoonmain p strong{
+	font-style: italic;
+}
+
+.comingsoonmain p.soon{
+	font-size: 62px;
+}
+
+ul.social{
+	text-align: center;
+	width: 100%;
+	margin-top: 20px;
+}
+
+ul.social li{
+	display: inline;
+	font-size: 14px;
+	color: #fff;
+}
+
+ul.social li a{
+	color: #fff;
+	text-decoration: none;
+	padding: 0 15px;
+	margin: 0;
+}
+
+ul.social li a span{
+	text-transform: uppercase;
+	text-decoration: underline;
+}
+
+ul.social li a:hover{
+	text-decoration: underline;
+}
+
+
+
+@media only screen 
+
+and (max-width : 1024px) 
+{
+
+
+.off_canavas_wrap{
+	-webkit-backface-visibility: hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+
+.logo h1{
+	font-size: 73px;
+	font-family: 'Just Another Hand', cursive;
+	color: #000;
+	margin-bottom: 30px;
+}
+
+
+.logo p{
+	font-size: 20px;
+}
+
+ul.features li h2{
+	font-size: 18px;
+	text-transform: uppercase;
+	margin-bottom: 3px;
+}
+
+
+ul.features li p{
+ display: none;
+}
+
+
+
+@media only screen 
+and (max-width : 568px) 
+{
+
+.off_canavas_wrap{
+	-webkit-backface-visibility: hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+
+.logo{
+	width: 75%;
+	margin: 20px auto 30px;
+	text-align: center;
+}
+
+.logo p{
+	font-size: 18px;
+}
+
+
+.header{
+	width: 100%;
+	float: left;
+	margin-bottom: 20px;
+}
+
+ul.features{
+	display: none;
+}
+
+p.mobile_text{
+	display: inherit;
+	width: 80%;
+	text-align: center;
+	margin: 0 auto;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+p.mobile_text span{
+	color: #c80403;
+	font-weight: bold;
+	line-height: 26px;
+}
+
+
+
+.comingsoonmain p{
+	font-size: 14px;
+	color: #ffffff;
+	text-align: center;
+	width: 80%;
+	margin: 0 auto;
+}
+
+
+.comingsoonmain p.soon{
+	font-size: 40px;
+}
+
+
+
+ul.social{
+	text-align: center;
+	width: 80%;
+	margin: 20px auto 0;
+}
+
+ul.social li{
+	display: inline;
+	font-size: 14px;
+	line-height: 40px;
+	color: #fff;
+}
+
+ul.social li a{
+	color: #fff;
+	text-decoration: none;
+	padding: 0 10px;
+}
+
+ul.social li a span{
+	text-transform: uppercase;
+	text-decoration: underline;
+}
+
+ul.social li a:hover{
+	text-decoration: underline;
+}
+
+
+</style>
+
+</head>
+<body>
+<div class="off_canavas_wrap">
+	<div class="header">
+		<div class="logo">
+			<img src="https://images.itfinden.com/core_itfinden_logo_RRSS.png" >
+		</div>
+		
+		<p class="mobile_text">
+			<a href="https://www.itfinden.com/">Home</a>,
+			<a href="https://clientes.itfinden.com/">Ventas</a>,<br/> 
+			<a href="https://soporte.itfinden.com/">Soporte</a>, 
+			<a href="https://www.itfinden.com/">Sitio Web</a></p>
+		
+		<ul class="features">
+			<a href="https://www.itfinden.com/">
+				<li class="home">
+				<h2>Home</h2>
+				<!--<p>volver a casa</p>-->
+				</li></a>
+			<a href="https://www.itfinden.com/">
+				<li class="relation">
+					<h2>Redes Sociales</h2>
+					<!--<p>Siguenos y obten las ultimas ofertas</p>-->
+				</li></a>
+			<a href="https://clientes.itfinden.com/">
+			<li class="ideas">
+				<h2>Negocio</h2>
+				<!--<p>Contactanos ...ahora</p>-->
+			</li></a>
+			<a href="https://soporte.itfinden.com/">
+			<li class="tech">
+				<h2>Soporte</h2>
+				<!--<p>soporte@itfinden.com</p>-->
+			</li></a>
+			<a href="https://www.itfinden.com/">
+			<li class="everything">
+				<h2>Sitio Web</h2>
+				<!--<p>www.itfinden.com</p>-->
+			</li></a>
+
+		</ul>
+	</div>
+	
+	<div class="comingsoon">
+		<div class="black"></div>
+		<div class="comingsoonmain">
+			
+			<p class="soon">Ya no esta aquí</p>
+
+			<ul class="social">
+				<li><a href="https://www.facebook.com/itfinden" target="_blank"><span>F</span>acebook</a></li>
+				<li><a href="https://www.twitter.com/itfinden" target="_blank"><span>T</span>witter</a></li>
+				<li><a href="https://www.instagram.com/itfinden" target="_blank"><span>I</span>nstagram</a></li>
+				<li><a href="https://www.LinkedIn.com/company/itfinden" target="_blank"><span>L</span>inkedIn</a></li>
+				<!--<li><a href="#" target="_blank"><span>Y</span>outube</a></li>-->
+			</ul>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			<h3 style="text-align: center;">
+  Redirigiendo a itfinden.com en <span id="countdown">20</span> segundos
+</h3>
+
+		</div>
+
+	</div>
+</div>
+
+<style type="text/css">
+	/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+.home_lnk {
+  background: #ff9934;
+  color: white;
+}
+.support_lnk {
+  background: #ff9934;
+  color: white;
+}
+.instagram {
+  background: #F56040;
+  color: white;
+}
+
+
+</style>
+
+<!-- Load font awesome icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- The social media icon bar -->
+<div class="icon-bar">
+  <a href="https://www.itfinden.com" class="home_lnk"><i class="fa fa-home"></i></a>
+  <a href="https://www.facebook.com/itfinden" class="facebook"><i class="fa fa-facebook"></i></a>
+  <a href="https://www.twitter.com/itfinden" class="twitter"><i class="fa fa-twitter"></i></a>
+  <!--<a href="#" class="google"><i class="fa fa-google"></i></a>
+  <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>-->
+  <a href="https://www.LinkedIn.com/company/itfinden" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  
+  <a href="https://www.instagram.com/itfinden" class="instagram"><i class="fa fa-instagram"></i></a>
+  <a href="https://soporte.itfinden.com" class="support_lnk"><i class="fa fa-support"></i></a>
+  
+  
+</div>
+
+
+<!-- Modify this according to your requirement -->
+
+<!-- JavaScript part -->
+<script type="text/javascript">
+    
+    // Total seconds to wait
+    var seconds = 20;
+    
+    function countdown() {
+        seconds = seconds - 1;
+        if (seconds < 0) {
+            // Chnage your redirection link here
+            window.location = "https://www.itfinden.com";
+        } else {
+            // Update remaining seconds
+            document.getElementById("countdown").innerHTML = seconds;
+            // Count down using javascript
+            window.setTimeout("countdown()", 1000);
+        }
+    }
+    
+    // Run countdown function
+    countdown();
+    
+</script>
+
+</body>
+</html>
